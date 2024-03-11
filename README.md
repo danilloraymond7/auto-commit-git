@@ -1,4 +1,4 @@
-# Template -- Flyer Typescript
+# Template -- HUB Typescript
 
 
 ## Setup
