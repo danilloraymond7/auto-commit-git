@@ -29,8 +29,12 @@ yarn husky install
   "prepare": "husky install"
 }
 
-# Adicionando hook para disparar o commitlint
-yarn husky add .husky/commit-msg 'yarn commitlint --edit $1'
+# Adicionando hook para disparar. Vá no arquivo pre-commit
+```bash
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx eslint src/**/*.ts;
 ```
 
 É essencial criar o script de `prepare` no arquivo `package.json` para automatizar a instalação do Husky. Isso garante que os ganchos sejam ativados automaticamente após a instalação, evitando a necessidade de configurá-los manualmente.
@@ -84,13 +88,7 @@ yarn add eslint -D
 yarn eslint --init
 ```
 
-File pre-commit do hysky
-```bash
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
 
-npx eslint src/**/*.ts;
-```
 Após instalar e configurar o ESLint, você pode executá-lo manualmente ou integrá-lo com ferramentas como o Husky para garantir que as verificações de linting sejam realizadas antes de cada confirmação de alterações.
 
 Template bacana para iniciar um projeto em typescript
