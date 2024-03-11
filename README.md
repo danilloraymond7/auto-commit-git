@@ -25,6 +25,9 @@ yarn add eslint -D
 yarn eslint --init
 ```
 
+Após instalar e configurar o ESLint, você pode executá-lo manualmente ou integrá-lo com ferramentas como o Husky para garantir que as verificações de linting sejam realizadas antes de cada confirmação de alterações.
+
+
 ✨ **Instalando o Husky**
 
 Husky é uma ferramenta que nos permite definir ganchos Git personalizados para automatizar tarefas antes de cada confirmação de alterações. Siga os passos abaixo para instalar e configurar o Husky:
@@ -87,9 +90,6 @@ git add .
 # Iniciando o Commitizen para fazer um commit
 yarn commit
 ```
-
-
-Após instalar e configurar o ESLint, você pode executá-lo manualmente ou integrá-lo com ferramentas como o Husky para garantir que as verificações de linting sejam realizadas antes de cada confirmação de alterações.
 
 Template bacana para iniciar um projeto em typescript
 
