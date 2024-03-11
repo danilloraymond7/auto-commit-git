@@ -85,12 +85,12 @@ yarn eslint --init
 ```
 
 File pre-commit do hysky
-
+```bash
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
 npx eslint src/**/*.ts;
-
+```
 Após instalar e configurar o ESLint, você pode executá-lo manualmente ou integrá-lo com ferramentas como o Husky para garantir que as verificações de linting sejam realizadas antes de cada confirmação de alterações.
 
 Template bacana para iniciar um projeto em typescript
