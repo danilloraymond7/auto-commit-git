@@ -13,6 +13,18 @@ Durante o setup deste projeto, utilizamos as seguintes ferramentas:
 
 Claro, aqui está uma descrição melhorada e expandida:
 
+✨ **Instalando o ESLint**
+
+ESLint é uma ferramenta de análise estática de código para identificar e relatar padrões problemáticos no código JavaScript. Siga os passos abaixo para instalar e configurar o ESLint:
+
+```bash
+# Instalando o ESLint
+yarn add eslint -D
+
+# Inicializando o ESLint (cria o arquivo de configuração .eslintrc.js)
+yarn eslint --init
+```
+
 ✨ **Instalando o Husky**
 
 Husky é uma ferramenta que nos permite definir ganchos Git personalizados para automatizar tarefas antes de cada confirmação de alterações. Siga os passos abaixo para instalar e configurar o Husky:
@@ -76,19 +88,23 @@ git add .
 yarn commit
 ```
 
-✨ **Instalando o ESLint**
-
-ESLint é uma ferramenta de análise estática de código para identificar e relatar padrões problemáticos no código JavaScript. Siga os passos abaixo para instalar e configurar o ESLint:
-
-```bash
-# Instalando o ESLint
-yarn add eslint -D
-
-# Inicializando o ESLint (cria o arquivo de configuração .eslintrc.js)
-yarn eslint --init
-```
-
 
 Após instalar e configurar o ESLint, você pode executá-lo manualmente ou integrá-lo com ferramentas como o Husky para garantir que as verificações de linting sejam realizadas antes de cada confirmação de alterações.
 
 Template bacana para iniciar um projeto em typescript
+
+No final adicione esse debug, isso vai ficar 100% automatizado
+
+```bash
+  "scripts": {
+    "start:dev": " tsx src/app.ts --watch",
+    "start": "tsx dist/app.js",
+    "build": "tsc",
+    "prepare": "husky install",
+    "lint": "eslint src/**/*.ts",
+    "commit": "git-cz",
+    "git": "git add . && npm run lint && npm run commit && git push origin HEAD"
+  },
+
+```
+
