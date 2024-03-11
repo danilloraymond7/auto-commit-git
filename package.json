@@ -1,0 +1,19 @@
+{
+  "name": "auto-commit-git",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": " tsx src/app.ts --watch",
+    "start": "tsx dist/app.js",
+    "build": "tsc",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "pinst": "^3.0.0",
+    "tsc": "^2.0.4",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2"
+  }
+}
