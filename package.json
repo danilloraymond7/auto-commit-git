@@ -8,7 +8,9 @@
     "start": "tsx dist/app.js",
     "build": "tsc",
     "prepare": "husky install",
-    "commit": "git-cz"
+    "lint": "eslint src/**/*.ts",
+    "commit": "git-cz",
+    "git": "git add . && npm run lint && npm run commit && git push origin HEAD"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.4.0",
