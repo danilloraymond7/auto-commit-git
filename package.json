@@ -7,7 +7,7 @@
     "start:dev": " tsx src/app.ts --watch",
     "start": "tsx dist/app.js",
     "build": "tsc",
-    "prepare": "husky"
+    "prepare": "husky install"
   },
   "devDependencies": {
     "husky": "^9.0.11",
