@@ -44,7 +44,7 @@ yarn husky install
   "prepare": "husky install"
 }
 
-# Adicionando hook para disparar. Vá no arquivo pre-commit
+# Adicionando hook para disparar. Vá no arquivo pre-commit dentro da pasta husky e cole o codigo abaixo
 ```bash
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
@@ -61,7 +61,7 @@ Após configurar o Husky, você pode testar se tudo está funcionando corretamen
 git add .
 
 # Fazendo um commit para testar a configuração
-git commit -m "chore: add commitlint e husky"
+git commit -m "chore: add e husky"
 ```
 
 ✨ **Instalando o Commitizen**
